@@ -19,12 +19,12 @@ public static void main(String[] args)
 System.out.println("Enter the number for List1");
     Scanner sc1 = new Scanner(System.in);// To take inut from the user
     int val1 = sc1.nextInt();// Input is stored in a variable
-    System.out.println("The First List");
-    printList(createList(val1));// Function call to print the list
     
 System.out.println("Enter the number for List2");
     Scanner sc2 = new Scanner(System.in);// To take input from the user
     int val2 = sc2.nextInt();// Input is stored in the variable
+    System.out.println("The First List");
+    printList(createList(val1));// Function call to print the list
     System.out.println("The Second List");
     printList(createList(val2));// Function call to print the list
 
@@ -70,11 +70,13 @@ static void printList(ListNode l)
 {
     ListNode list= new ListNode(); // list is created to traverse the list
     list=l;
+    System.out.print("[");
     while(list!=null) // loop to traverse the list until all the nodes are not traversed
     { 
-        System.out.println(list.data); // to print the value stord at each node of the list
+        System.out.print(list.data); // to print the value stord at each node of the list
         list=list.next; // list will point to its next node
     }
+    System.out.println("]");
 }
 
 }
