@@ -62,7 +62,8 @@ static ListNode createListNode(int size)
     return head.next;
 } 
 
-// Function to resverse the linked list iteratively
+// Function to resverse the linked list recursively
+    
 static ListNode reverseList(ListNode head)
 {
     if(head==null) return null;
